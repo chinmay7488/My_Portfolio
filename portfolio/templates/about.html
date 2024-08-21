@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% load static %}
+<section class="about">
+    <div class="about-about">
+        <div class="about-text">
+            <h3>Know Who I'M</h3>
+            <ul>
+                <li>Python</li>
+                <li>Java</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam architecto assumenda aut doloremque
+                dolores eos fugit id itaque magnam minima obcaecati perferendis quod tempore, voluptate? A debitis
+                doloremque possimus quaerat recusandae.</p>
+        </div>
+        <img class="about-img" src="{% static 'imgs/Logo_withoutShadow.png' %}"/>
+    </div>
+    <div class="about-education">
+        <div>
+            <h2>Full-stack Developer</h2>
+            <h3>Google</h3>
+            <h4>2015</h4>
+        </div>
+        <div>
+            <h2>python Developer</h2>
+            <h3>Google</h3>
+            <h4>2015</h4>
+        </div>
+    </div>
+    <div class="about-skills">
+        <div class="skill-img">
+            <div class="skills-wrapper">
+            </div>
+            <div class="skills-text">
+            </div>
+        </div>
+    </div>
+    <div class="about-certifications">
+        <div class="certi-wrapper">
+            <div class="certi-img">
+                <img src="{% static 'imgs/certi1.jpg' %}"/>
+            </div>
+            <div class="certi-text">
+                <h3>MlLoops Machine learning</h3>
+                <p><span>Date:</span>1 Jan - 1 June</p>
+            </div>
+        </div>
+        <div class="certi-wrapper">
+            <div class="certi-img">
+                <img src="{% static 'imgs/certi1.jpg' %}"/>
+            </div>
+            <div class="certi-text">
+                <h3>MlLoops Machine learning</h3>
+                <p><span>Date:</span>1 Jan - 1 June</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+{% block script %}
+{% endblock %}
+

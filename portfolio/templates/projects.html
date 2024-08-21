@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<div class="content-project">
+    <div class="project" style="height: 88vh">
+        <div class="project-video">
+            <img src="{% static 'imgs/laptop.png' %}">
+            <iframe class="video-wrapper"
+                    src="https://drive.google.com/file/d/1Rr1ZmQo8CACx2qi7PkZ7Z912dNP1Tr4F/preview"></iframe>
+            <!--https://drive.google.com/file/d/1Rr1ZmQo8CACx2qi7PkZ7Z912dNP1Tr4F/view?usp=sharing-->
+        </div>
+        <div class="project-details">
+            <h2>ATM Security</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi architecto atque, blanditiis culpa
+                dignissimos distinctio eos excepturi illum labore maxime natus, praesentium, quasi rem saepe sapiente
+                suscipit tempora velit voluptas voluptate!</p>
+            <div class="skills">
+                <h3>Skills Learned:</h3>
+                <span>Python</span>
+                <span>OpenCV</span>
+                <span>Tkinter</span>
+            </div>
+            <ul>
+                <li>Github Link:<a href="">Click here</a></li>
+                <li>Visit:<a href="">Click here</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="project">
+        <div class="project-details">
+            <h2>ATM Security</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi architecto atque, blanditiis culpa
+                dignissimos distinctio eos excepturi illum labore maxime natus, praesentium, quasi rem saepe sapiente
+                suscipit tempora velit voluptas voluptate!</p>
+            <div class="skills">
+                <h3>Skills Learned:</h3>
+                <span>Python</span>
+                <span>OpenCV</span>
+                <span>Tkinter</span>
+            </div>
+            <ul>
+                <li>Github Link:<a href="">Click here</a></li>
+                <li>Visit:<a href="">Click here</a></li>
+            </ul>
+        </div>
+        <div class="project-video">
+            <img src="{% static 'imgs/laptop.png' %}">
+            <iframe class="video-wrapper"
+                    src="https://drive.google.com/file/d/1Rr1ZmQo8CACx2qi7PkZ7Z912dNP1Tr4F/preview"></iframe>
+            <!--https://drive.google.com/file/d/1Rr1ZmQo8CACx2qi7PkZ7Z912dNP1Tr4F/view?usp=sharing-->
+        </div>
+    </div>
+</div>
+
+<!--https://drive.google.com/file/d/1Rr1ZmQo8CACx2qi7PkZ7Z912dNP1Tr4F/view?usp=sharing-->
+{% endblock %}
+{% block script %}
+{% endblock %}
