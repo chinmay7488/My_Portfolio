@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block stylesheet %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+{% endblock %}
+
 {% block body %}
 {% load static %}
 <section class="about">
@@ -14,52 +18,117 @@
                 dolores eos fugit id itaque magnam minima obcaecati perferendis quod tempore, voluptate? A debitis
                 doloremque possimus quaerat recusandae.</p>
         </div>
-        <img class="about-img" src="{% static 'imgs/Logo_withoutShadow.png' %}"/>
-    </div>
-    <div class="about-education">
-        <div>
-            <h2>Full-stack Developer</h2>
-            <h3>Google</h3>
-            <h4>2015</h4>
-        </div>
-        <div>
-            <h2>python Developer</h2>
-            <h3>Google</h3>
-            <h4>2015</h4>
+        <div class="about-text-img">
+            <img class="about-img" src="{% static 'imgs/Logo_withoutShadow.png' %}"/>
         </div>
     </div>
-    <div class="about-skills">
-        <div class="skill-img">
-            <div class="skills-wrapper">
-            </div>
-            <div class="skills-text">
+    <section class="about-education-certificate">
+        <div class="about-education info-box comman-text">
+            <h1>Eduction</h1>
+            <ul>
+                <li>
+                    <h2>Full-stack Developer</h2>
+                    <h3>Google</h3>
+                    <h4>2015</h4>
+                </li>
+                <li>
+                    <h2>python Developer</h2>
+                    <h3>Google</h3>
+                    <h4>2015</h4>
+                </li>
+            </ul>
+        </div>
+        <div class="about-certificate info-box comman-text">
+            <h1>Certificate</h1>
+            <ul>
+                <li>
+                    <h2>Full-stack Developer</h2>
+                    <h3>Google</h3>
+                    <h4>2015</h4>
+                </li>
+                <li>
+                    <h2>python Developer</h2>
+                    <h3>Google</h3>
+                    <h4>2015</h4>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="about-skills">
+        <div class="swiper">
+            <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                        <a href="" class="card-link">
+                            <img class="card-image" alt="Card Image" src="{% static 'imgs/1.jpg' %}">
+                            <p class="badge">Skills</p>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="" class="card-link">
+                            <img class="card-image" alt="Card Image" src="{% static 'imgs/1.jpg' %}">
+                            <p class="badge">Skills</p>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="" class="card-link">
+                            <img class="card-image" alt="Card Image" src="{% static 'imgs/1.jpg' %}">
+                            <p class="badge">Skills</p>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="" class="card-link">
+                            <img class="card-image" alt="Card Image" src="{% static 'imgs/1.jpg' %}">
+                            <p class="badge">Skills</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
             </div>
         </div>
-    </div>
-    <div class="about-certifications">
-        <div class="certi-wrapper">
-            <div class="certi-img">
-                <img src="{% static 'imgs/certi1.jpg' %}"/>
-            </div>
-            <div class="certi-text">
-                <h3>MlLoops Machine learning</h3>
-                <p><span>Date:</span>1 Jan - 1 June</p>
-            </div>
-        </div>
-        <div class="certi-wrapper">
-            <div class="certi-img">
-                <img src="{% static 'imgs/certi1.jpg' %}"/>
-            </div>
-            <div class="certi-text">
-                <h3>MlLoops Machine learning</h3>
-                <p><span>Date:</span>1 Jan - 1 June</p>
-            </div>
-        </div>
-    </div>
+    </section>
 </section>
 
 
 {% endblock %}
 {% block script %}
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.card-wrapper', {
+        loop: true,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 2500,
+        },
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            }
+        }
+    });
+</script>
 {% endblock %}
 

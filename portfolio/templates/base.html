@@ -3,31 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Chinmay Jain</title>
-
     {% load static %}
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link rel="stylesheet" href="{% static 'css/main.css' %}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <style>
-        body {
-            background-color: #1a1625;
-            /*background-image: url("{% static 'Background_image.jpg' %}");*/
-            /*background-repeat: no-repeat;*/
-            /*background-position:center ;*/
-            /*background-attachment: fixed;*/
-            /*background-size: cover;*/
-        }
-    </style>
+    {% block stylesheet %}
+        {% endblock %}
 
 </head>
 <body>
-
-<header>
+    <header>
     <nav class="nav">
         <div class="nav-header">
             <p>
-                __Chinmay Jain
+                <a href="{% url 'Home' %}">
+                    __Chinmay_Jain__
+                </a>
             </p>
         </div>
         <div class="nav-menu">
@@ -36,44 +28,43 @@
                 <li><a href="{% url 'about' %}">About</a></li>
                 <li><a href="{% url 'project' %}">Project</a></li>
                 <li><a href="{% url 'experience' %}">Experience</a></li>
-                <li>
-                    <div class="download-btn">
-                        <div class="button-wrapper">
-                            <div class="text">Download Resume</div>
-                            <span class="icon">
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                        role="img"
-                        width="2em"
-                        height="2em"
-                        preserveAspectRatio="xMidYMid meet"
-                        viewBox="0 0 24 24"
-                >
-                  <path
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                  ></path>
-                </svg>
-              </span>
-                        </div>
-                    </div>
-                </li>
+                <li><a href="{% url 'experience' %}">Download Resume</a></li>
+                <!--                <li>-->
+                <!--                    <div class="download-btn">-->
+                <!--                        <div class="button-wrapper">-->
+                <!--                            <div class="text">Download Resume</div>-->
+                <!--                            <span class="icon">-->
+                <!--                <svg-->
+                <!--                        xmlns="http://www.w3.org/2000/svg"-->
+                <!--                        aria-hidden="true"-->
+                <!--                        role="img"-->
+                <!--                        width="2em"-->
+                <!--                        height="2em"-->
+                <!--                        preserveAspectRatio="xMidYMid meet"-->
+                <!--                        viewBox="0 0 24 24"-->
+                <!--                >-->
+                <!--                  <path-->
+                <!--                          fill="none"-->
+                <!--                          stroke="currentColor"-->
+                <!--                          stroke-linecap="round"-->
+                <!--                          stroke-linejoin="round"-->
+                <!--                          stroke-width="2"-->
+                <!--                          d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"-->
+                <!--                  ></path>-->
+                <!--                </svg>-->
+                <!--              </span>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </li>-->
             </ul>
         </div>
     </nav>
 </header>
-
-<div class="container">
-
-    {% block body %}
-    {% endblock %}
-
-</div>
+    <div class="container">
+        {% block body %}
+        {% endblock %}
+    </div>
+</body>
 {% block script %}
 {% endblock %}
 

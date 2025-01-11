@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% block body %}
 {% load static %}
-<div class="content-project">
-    <div class="project" style="height: 88vh">
+<section class="content-project">
+    <section class="project">
         <div class="project-video">
             <img src="{% static 'imgs/laptop.png' %}">
             <iframe class="video-wrapper"
                     src="https://drive.google.com/file/d/1Rr1ZmQo8CACx2qi7PkZ7Z912dNP1Tr4F/preview"></iframe>
             <!--https://drive.google.com/file/d/1Rr1ZmQo8CACx2qi7PkZ7Z912dNP1Tr4F/view?usp=sharing-->
         </div>
-        <div class="project-details">
+        <div class="description project-details-light">
             <h2>ATM Security</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi architecto atque, blanditiis culpa
                 dignissimos distinctio eos excepturi illum labore maxime natus, praesentium, quasi rem saepe sapiente
@@ -25,9 +25,9 @@
                 <li>Visit:<a href="">Click here</a></li>
             </ul>
         </div>
-    </div>
-    <div class="project">
-        <div class="project-details">
+    </section>
+    <section class="project" style="background-color: var(--mediumlight-color)">
+        <div class="description project-details-dark">
             <h2>ATM Security</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi architecto atque, blanditiis culpa
                 dignissimos distinctio eos excepturi illum labore maxime natus, praesentium, quasi rem saepe sapiente
@@ -49,8 +49,8 @@
                     src="https://drive.google.com/file/d/1Rr1ZmQo8CACx2qi7PkZ7Z912dNP1Tr4F/preview"></iframe>
             <!--https://drive.google.com/file/d/1Rr1ZmQo8CACx2qi7PkZ7Z912dNP1Tr4F/view?usp=sharing-->
         </div>
-    </div>
-</div>
+    </section>
+</section>
 
 <!--https://drive.google.com/file/d/1Rr1ZmQo8CACx2qi7PkZ7Z912dNP1Tr4F/view?usp=sharing-->
 {% endblock %}

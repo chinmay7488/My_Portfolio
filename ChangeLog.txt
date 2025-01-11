@@ -1,0 +1,9 @@
+[26-12-2024]
+1. Removed unwanted variables
+
+[11-01-2025]
+1. Added certificate model
+2. Added education model
+3. Added Skill model
+4. Added experience model
+5. Edited Project page UI

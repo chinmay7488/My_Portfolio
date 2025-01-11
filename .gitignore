@@ -1,3 +1,5 @@
 # created by virtualenv automatically
 venv/*
 .idea/*
+mysite/__pycache__/
+portfolio/__pycache__/
